@@ -3,6 +3,8 @@ package arrays;
 public class DeclararArrays {
 
 	public static void main(String[] args) {
+		
+		//1ºCASO: DECLARAR, CREAR Y RECORRER POR SEPARADO
 		//Declarar primer array (de enteros)
 		//Creamos la referencia
 		int[] referenciaEnteros;
@@ -21,6 +23,7 @@ public class DeclararArrays {
 			System.out.println("Valor "+i+": "+referenciaEnteros[i]);
 		}
 		
+		//2ºCASO: DECLARAR Y CREAR CONJUNTAMENTE Y RECORRER POR SEPARADO
 		//Declaramos y creamos la referencia
 		double[] referenciaDoubles = new double[3];
 		
@@ -34,6 +37,7 @@ public class DeclararArrays {
 			System.out.printf("Valor %d: %.2f%n",i,referenciaDoubles[i]);
 		}
 		
+		//3ºCASO: DECLARAR, CREAR E INICIALIZAR CONJUNTAMENTE Y RECORRER POR SEPARADO
 		//Declaramos, creamos e inicializamos el array
 		String[] referenciaCadenas = {"Hola", " ","mundo"};
 		
@@ -43,6 +47,7 @@ public class DeclararArrays {
 		}
 		System.out.println();
 		
+		//4ºCASO: ARRAYS BOOLEANOS
 		//Creamos e inicializamos un array boolean
 		boolean[] referenciaBoolean = {true, false, true};
 		
@@ -52,6 +57,7 @@ public class DeclararArrays {
 		}
 		System.out.println();
 		
+		//5ºCASO: ARRAYS CON BUCLES MEJORADOS
 		//recorremos arrays con un bucle mejorado
 		for(String cadena: referenciaCadenas){
 			System.out.print(cadena);
