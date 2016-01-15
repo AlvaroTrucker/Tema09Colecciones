@@ -1,5 +1,7 @@
 package arrays;
 
+import java.util.Arrays;
+
 public class Coleccion {
 	//atributos
 	private static double[][] vector;
@@ -13,6 +15,7 @@ public class Coleccion {
 		this.vector = vector;
 	}
 
+	//método que rellena números en el array
 	public void rellenarColeccion(int multiplicador){
 		for (int i = 0; i < vector.length; i++) {
 			for (int j = 0; j < vector[i].length; j++) {
@@ -21,6 +24,7 @@ public class Coleccion {
 		}
 	}
 	
+	//método que muestra el array
 	public static void mostrarColeccion(){
 		for (int i = 0; i < vector.length; i++) {
 			for (int j = 0; j < vector[i].length; j++) {
@@ -30,6 +34,7 @@ public class Coleccion {
 		}
 	}
 	
+	//método para calcular el mínimo número de la colección
 	public double minimoColeccion(){
 		double minimo = vector[0][0];
 		for (int i = 0; i < vector.length; i++) {
@@ -41,6 +46,7 @@ public class Coleccion {
 		return minimo;
 	}
 	
+	//método para calcular el máximo número de la colección
 	public double maximoColeccion(){
 		double maximo = vector[0][0];
 		for (int i = 0; i < vector.length; i++) {
@@ -52,7 +58,7 @@ public class Coleccion {
 		return maximo;
 	}
 	
-	
+	//método para calcular la media de la colección
 	public double mediaColeccion(){
 		double media = 0;
 		double suma = 0;
@@ -63,5 +69,23 @@ public class Coleccion {
 		}
 		media = suma / (vector.length * vector[0].length);
 		return media;
+	}
+	
+	//metodo que convierte el array bidimensional a unidimensional
+	//usamos la clase Arrays para ordenar el array unidimensional
+	//hacemos cálculos estadísticos
+	public void calcularValoresEstadisticos(){
+		int tamano = vector.length * vector[0].length;
+		double[] vectorUnidimensional = new double[tamano];
+		int contador = 0;
+		for (double[] ds : vector) {
+			for (double d : ds) {
+				vectorUnidimensional[contador] = d;
+				contador++;
+			}
+		}
+		Arrays.sort(vectorUnidimensional);
+		System.out.printf("Valor mas grande: %.2f y el mas pequeño %.2f",
+				vectorUnidimensional[vectorUnidimensional.length-1],vectorUnidimensional[0]);
 	}
 }
