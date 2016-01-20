@@ -27,7 +27,7 @@ public class Colecciones1 {
 		return Arrays.toString(array);
 	}
 	
-	public int calcularLongitudArray(){
-		return array.length()
-	}
+	/*public int calcularLongitudArray(){
+		return array.length();
+	}*/
 }
