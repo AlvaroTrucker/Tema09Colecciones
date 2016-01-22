@@ -22,8 +22,20 @@ public class TestTienda {
 		System.out.println("Producto mas caro: "+t.obtenerProductoMasCaro().getNombreProducto());
 		System.out.println("Producto mas barato: "+t.obtenerProductoMasBarato().getNombreProducto());
 
-		//eliminar productos
+		/*//eliminar productos
 		t.eliminarProducto(producto4);
 		System.out.println(t.listarProductos());
+		*/
+		//AMPLIACIÓN: Queremos eliminar un producto en función de su nombre
+		//deberíamos usar una sentencia como
+		//t.eliminarProductoPorNombre(nombre);
+		t.eliminarProductoPorNombre("crema");
+		if (t.eliminarProductoPorNombre("crema"))
+			System.out.println("Producto eliminado");
+		else
+			System.out.println("No se ha eliminado el producto");
+		
+		System.out.println(t.listarProductos());
+
 	}
 }

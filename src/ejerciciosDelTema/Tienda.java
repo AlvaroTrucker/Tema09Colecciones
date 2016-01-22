@@ -54,4 +54,19 @@ public class Tienda {
 	public String listarProductos(){
 		return listaProductos.toString();
 	}
+	
+	//AMPLIACIÓN: metodo que elimina un producto dado el nombre del mismo
+	public boolean eliminarProductoPorNombre(String nombre){
+		//boolean que nos informa del exito de la operacion
+		boolean exito = false;
+		//logica del metodo
+		for (Producto producto : listaProductos) {
+			if (producto.getNombreProducto().equals(nombre)){
+				listaProductos.remove(producto);
+				exito = true;
+				break;
+			}
+		}
+		return exito;
+	}
 }
