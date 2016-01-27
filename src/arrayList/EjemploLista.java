@@ -43,6 +43,6 @@ public class EjemploLista {
 		}
 		
 		//forma 3: Java 8
-		listaCadenas.forEach(System.out::println);
+		//listaCadenas.forEach(System.out::println);
 	}
 }
